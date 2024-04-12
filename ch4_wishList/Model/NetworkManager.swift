@@ -7,8 +7,8 @@
 
 import Foundation
 
-final class NetworkManager {
-    func fetchProduct() {
+class NetworkManager {
+    func fetchProduct(completion: @escaping ([Product]) -> Void) {
         let session = URLSession.shared
         
         let productID = Int.random(in: 0...100)
@@ -19,17 +19,18 @@ final class NetworkManager {
                     print("Error: \(error)")
                 } else if let data = data {
                     do {
-                        let decoder = JSONDecoder()
+                        let product = try JSONDecoder().decode(Product.self, from: data)
+                        completion([product])
                         
-                        let product = try decoder.decode(Product.self, from: data)
                         print("ID: \(product.id)")
-                        print("abc")
-                        print("Decoded Product: \(product)")
+                        print("Title: \(product.title)")
+                        print("Description: \(product.description)")
+                        print("Thumbnail: \(product.thumbnail)")
+//                        print("Decoded Product: \(product)")
                     } catch {
                         print("Error : \(error)")
                     }
                 }
-                
             }
             task.resume()
         }
