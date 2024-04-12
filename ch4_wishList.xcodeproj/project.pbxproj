@@ -14,6 +14,8 @@
 		AB5610982BC80EC400CC8844 /* ch4_wishList.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AB5610962BC80EC400CC8844 /* ch4_wishList.xcdatamodeld */; };
 		AB56109A2BC80EC500CC8844 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB5610992BC80EC500CC8844 /* Assets.xcassets */; };
 		AB56109D2BC80EC500CC8844 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = AB56109C2BC80EC500CC8844 /* Base */; };
+		AB5610A62BC8CBB600CC8844 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5610A52BC8CBB600CC8844 /* Product.swift */; };
+		AB5610A82BC8D32000CC8844 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5610A72BC8D32000CC8844 /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		AB5610992BC80EC500CC8844 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AB56109C2BC80EC500CC8844 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AB56109E2BC80EC500CC8844 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AB5610A52BC8CBB600CC8844 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		AB5610A72BC8D32000CC8844 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,7 @@
 		AB56108C2BC80EC400CC8844 /* ch4_wishList */ = {
 			isa = PBXGroup;
 			children = (
+				AB5610A42BC8CAE100CC8844 /* Model */,
 				AB56108D2BC80EC400CC8844 /* AppDelegate.swift */,
 				AB56108F2BC80EC400CC8844 /* SceneDelegate.swift */,
 				AB5610912BC80EC400CC8844 /* ViewController.swift */,
@@ -68,6 +73,15 @@
 				AB5610962BC80EC400CC8844 /* ch4_wishList.xcdatamodeld */,
 			);
 			path = ch4_wishList;
+			sourceTree = "<group>";
+		};
+		AB5610A42BC8CAE100CC8844 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AB5610A52BC8CBB600CC8844 /* Product.swift */,
+				AB5610A72BC8D32000CC8844 /* NetworkManager.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,8 +155,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB5610A82BC8D32000CC8844 /* NetworkManager.swift in Sources */,
 				AB5610922BC80EC400CC8844 /* ViewController.swift in Sources */,
 				AB56108E2BC80EC400CC8844 /* AppDelegate.swift in Sources */,
+				AB5610A62BC8CBB600CC8844 /* Product.swift in Sources */,
 				AB5610982BC80EC400CC8844 /* ch4_wishList.xcdatamodeld in Sources */,
 				AB5610902BC80EC400CC8844 /* SceneDelegate.swift in Sources */,
 			);

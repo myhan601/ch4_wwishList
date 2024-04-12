@@ -8,6 +8,8 @@
 import UIKit
 
 class ViewController: UIViewController {
+    let networkManager = NetworkManager()
+    var product: [Product] = []
 
     @IBOutlet weak var productImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
@@ -28,7 +30,8 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        networkManager.fetchProduct()
+        print(product)
     }
 
 
