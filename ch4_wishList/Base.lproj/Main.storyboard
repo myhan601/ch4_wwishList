@@ -61,9 +61,15 @@
                                     <constraint firstItem="IIZ-HW-MKX" firstAttribute="leading" secondItem="QIZ-Cr-lDV" secondAttribute="trailing" constant="16" id="bsy-TR-PvS"/>
                                 </constraints>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HaI-0t-IH7">
-                                <rect key="frame" x="16" y="475" width="327" height="97"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HaI-0t-IH7">
+                                <rect key="frame" x="16" y="511" width="327" height="18"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0o7-pp-it0">
+                                <rect key="frame" x="16" y="474.66666666666669" width="127" height="20.333333333333314"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -73,10 +79,12 @@
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aRf-wB-5Zo" secondAttribute="trailing" constant="50" id="1JC-Ke-89c"/>
                             <constraint firstItem="yeD-3G-QxA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="2Pt-G9-zMb"/>
+                            <constraint firstItem="0o7-pp-it0" firstAttribute="top" secondItem="aRf-wB-5Zo" secondAttribute="bottom" constant="16" id="5eo-YT-NoI"/>
+                            <constraint firstItem="0o7-pp-it0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="DGl-4F-U2s"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="HaI-0t-IH7" secondAttribute="trailing" constant="50" id="EL6-TX-RfS"/>
-                            <constraint firstItem="HaI-0t-IH7" firstAttribute="top" secondItem="aRf-wB-5Zo" secondAttribute="bottom" constant="16" id="GDW-M6-eb4"/>
                             <constraint firstItem="AcW-5S-NLq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="J7a-ZY-dFM"/>
                             <constraint firstItem="r4G-EG-sOf" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="KnJ-VY-mNe"/>
+                            <constraint firstItem="HaI-0t-IH7" firstAttribute="top" secondItem="0o7-pp-it0" secondAttribute="bottom" constant="16" id="LMy-B4-2MY"/>
                             <constraint firstItem="yeD-3G-QxA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="MfO-41-zf2"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="r4G-EG-sOf" secondAttribute="trailing" constant="16" id="SM4-Jl-dlu"/>
                             <constraint firstItem="HaI-0t-IH7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Svf-Oi-fOs"/>
@@ -84,6 +92,7 @@
                             <constraint firstItem="r4G-EG-sOf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Ze7-Ie-5iw"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="yeD-3G-QxA" secondAttribute="bottom" constant="389" id="cgd-1f-Qac"/>
                             <constraint firstItem="yeD-3G-QxA" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="gep-J3-Fzc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0o7-pp-it0" secondAttribute="trailing" constant="250" id="hVT-2Z-OKX"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="AcW-5S-NLq" secondAttribute="trailing" constant="16" id="mU7-ZZ-7XQ"/>
                             <constraint firstItem="r4G-EG-sOf" firstAttribute="top" secondItem="AcW-5S-NLq" secondAttribute="bottom" constant="8" id="xze-Gi-VzD"/>
                             <constraint firstItem="aRf-wB-5Zo" firstAttribute="top" secondItem="yeD-3G-QxA" secondAttribute="bottom" constant="8" id="zpz-Wy-P0G"/>
@@ -91,6 +100,7 @@
                     </view>
                     <connections>
                         <outlet property="descriptionLabel" destination="HaI-0t-IH7" id="ePR-kZ-Tia"/>
+                        <outlet property="priceLabel" destination="0o7-pp-it0" id="D4F-8s-YO0"/>
                         <outlet property="productImageView" destination="yeD-3G-QxA" id="X3W-u5-vRK"/>
                         <outlet property="titleLabel" destination="aRf-wB-5Zo" id="fYn-yt-iDq"/>
                     </connections>
@@ -105,13 +115,13 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGray2Color">
-            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
