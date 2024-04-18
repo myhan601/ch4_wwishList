@@ -33,6 +33,7 @@
                                 <buttonConfiguration key="configuration" style="plain" title="위시리스트 보기"/>
                                 <connections>
                                     <action selector="showWishListTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EwL-vE-30b"/>
+                                    <segue destination="2Nt-mb-f0L" kind="presentation" id="8ym-vs-Ycx"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="AcW-5S-NLq">
@@ -44,7 +45,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="위시 리스트 담기"/>
                                         <connections>
-                                            <action selector="setWishListButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NSl-hB-IYr"/>
+                                            <action selector="addWishListBtnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vd2-a5-qPg"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IIZ-HW-MKX">
@@ -108,6 +109,36 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="119.84732824427481" y="-27.464788732394368"/>
+        </scene>
+        <!--Wish View Controller-->
+        <scene sceneID="11j-iU-lSE">
+            <objects>
+                <viewController id="2Nt-mb-f0L" customClass="WishViewController" customModule="ch4_wishList" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qKC-fo-V1V">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Lik-qD-y5i">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="NIw-DI-po7"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Lik-qD-y5i" firstAttribute="leading" secondItem="NIw-DI-po7" secondAttribute="leading" id="1CZ-2N-sQp"/>
+                            <constraint firstItem="Lik-qD-y5i" firstAttribute="top" secondItem="NIw-DI-po7" secondAttribute="top" id="Dth-uu-xJ6"/>
+                            <constraint firstItem="NIw-DI-po7" firstAttribute="bottom" secondItem="Lik-qD-y5i" secondAttribute="bottom" id="KXr-s2-JCJ"/>
+                            <constraint firstItem="NIw-DI-po7" firstAttribute="trailing" secondItem="Lik-qD-y5i" secondAttribute="trailing" id="Zle-ei-lqP"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="Lik-qD-y5i" id="VQ8-vn-8BS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ema-zO-aAx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="885" y="-27"/>
         </scene>
     </scenes>
     <resources>
